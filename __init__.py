@@ -9,12 +9,13 @@ class RecieveKnock(MycroftSkill):
     def handle_knock_recieve(self, message):
         self.speak_dialog('knock.recieve')
         
-    @intent_file_handler('knock.who.intent').require('name')
+    @intent_file_handler('knock.who.intent').require("name")
     def handle_who(self,message):
         utterance=message.data.get('utterance')
         utterance += " who?"
         self.speak(utterance)
-
+        
+    
 
 def create_skill():
     return RecieveKnock()
