@@ -10,7 +10,7 @@ class RecieveKnock(MycroftSkill):
     def handle_knock_recieve(self, message):
         response =self.get_response('who is there')
         response += " who?"
-        response =self.get_response(response)
+        response =self.get_response(announcement=response)
         self.speak_dialog("very_funny")
         time.sleep(12)
         
