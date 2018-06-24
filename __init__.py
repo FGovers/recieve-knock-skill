@@ -15,10 +15,11 @@ class RecieveKnock(MycroftSkill):
 	#self.speak(response2)
         response3 =self.get_response(announcement=response2)
         self.speak_dialog('veryfunny')
-        time.sleep(12)
+        time.sleep(3)
         
     def stop(self):
         pass
 
 def create_skill():
     return RecieveKnock()
+
